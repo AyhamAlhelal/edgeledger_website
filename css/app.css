@@ -1,0 +1,368 @@
+:root {
+  --b-color: rgba(47, 54, 64, 1);
+  --g-color: rgba(68, 189, 50, 1);
+  --w-color: rgba(255, 255, 255, 1);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h2,
+h3,
+h4 {
+  font-family: "Open Sans", sans-serif;
+}
+.header-bar {
+  display: flex;
+  flex-flow: row wrap;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px 10px;
+  color: var(--w-color);
+  justify-content: space-between;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  /* vertical-align: middle; */
+}
+.header-bar span {
+  color: var(--g-color);
+}
+.header-bar h1 {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 15px;
+}
+.navigation {
+  /* padding: 16px; */
+}
+.navigation ul {
+  list-style-type: none;
+}
+.navigation ul li {
+  display: inline-block;
+  text-align: center;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.navigation ul li a {
+  text-decoration: none;
+  color: var(--w-color);
+  font-size: 18px;
+  text-align: center;
+}
+
+.navigation ul li:hover {
+  cursor: pointer;
+  background: var(--g-color);
+}
+
+.header-content {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/showcase.jpg) no-repeat center center/cover;
+  text-align: center;
+  color: var(--w-color);
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.header-content h1 {
+  font-size: 70px;
+  font-weight: bolder;
+  padding-bottom: 30px;
+  text-transform: capitalize;
+}
+.header-content p {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+  padding-bottom: 30px;
+}
+
+.header-content a {
+  text-decoration: none;
+  padding: 10px 20px;
+  color: var(--w-color);
+  background: var(--g-color);
+  border-radius: 5px;
+}
+
+.header-content a:hover {
+  background: rgb(42, 117, 30);
+}
+
+.whatwedo {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+.whatwedo .logo {
+  display: inline-block;
+}
+.whatwedo i {
+  display: inline-block;
+  border-radius: 50%;
+  padding: 15px;
+  background: var(--g-color);
+}
+
+.whatwedo h2 {
+  grid-column: 1 / span 3;
+  text-align: center;
+  padding-bottom: 30px;
+}
+.whatwedo h2 span {
+  color: var(--g-color);
+}
+
+.whatwedo div {
+  display: inline-grid;
+  grid-template-columns: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.whatwedo div span {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.whatwedo div h3 {
+  padding-bottom: 20px;
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.whatwedo div p {
+  grid-area: 3 / 1 / 4 / 2;
+}
+
+.whoweare {
+  width: 100%;
+  /* height: 25vh; */
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.whoweare-cover {
+  grid-area: 1 / 1 / span 1 / span 1;
+  background: url("../img/people.jpg") no-repeat center center/cover;
+}
+
+.whoweare-content {
+  grid-area: 1 / 2 / span 1 / span 1;
+  padding: 16px;
+  background: var(--b-color);
+  color: var(--w-color);
+}
+.whoweare-content h3,
+.whoweare-content p,
+.whoweare-content h4 {
+  margin-bottom: 20px;
+}
+.whoweare-content li {
+  padding: 5px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.whoweare-content ul {
+  list-style-type: none;
+}
+
+.whoweare-content span {
+  color: var(--g-color);
+}
+
+.ourclients {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  color: var(--b-color);
+  margin: 40px 0;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.ourclients h2 {
+  grid-area: 1 / 1 / span 1 / span 5;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.ourclients p {
+  margin: 0 10px;
+}
+.ourclients img {
+  max-width: 50%;
+  height: auto;
+}
+.ourclients p {
+}
+
+.ourclients h2 span {
+  color: var(--g-color);
+}
+
+.contact {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background: var(--g-color);
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  grid-area: 1 / 1 / span 1 / span 1;
+  padding: 16px;
+  /* background: var(--b-color); */
+  color: var(--w-color);
+}
+
+/* contact-cover
+
+background: url("../img/windows.jpg") no-repeat center center/cover;
+*/
+.map {
+  height: 100%;
+  grid-area: 1 / 2 / span 1 / span 1;
+}
+
+.contact-form form {
+  width: 100%;
+}
+
+.contact-form h2,
+.contact-form h4,
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 10px;
+  margin: 16px 0;
+  /* background: #f2f2f2; */
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: #f2f2f2;
+  border: none;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form [type="submit"] {
+  background: var(--b-color);
+  color: var(--w-color);
+}
+
+footer {
+  padding: 30px 20px;
+  width: 100%;
+  /* height: 100px; */
+  background: var(--b-color);
+  color: var(--w-color);
+  text-align: center;
+}
+footer p {
+  margin: 30px 20px;
+}
+@media screen and (max-width: 600px) {
+  .header-bar {
+    justify-content: center;
+    align-items: center;
+  }
+  .whatwedo {
+    grid-template-columns: 100%;
+  }
+
+  .whatwedo h2 {
+    grid-column: 1 / span 1;
+  }
+  .whatwedo div {
+    grid-template-columns: 20% 80%;
+  }
+  .whatwedo div h3 {
+    padding-bottom: 20px;
+    grid-area: 1 / 2 / 2 / 3;
+    text-align: left;
+  }
+
+  .whatwedo div span {
+    grid-area: 1 / 1 / 3 / 2;
+  }
+
+  .whatwedo div p {
+    grid-area: 2 / 2 / 3 / 3;
+    text-align: left;
+  }
+
+  .whoweare {
+    grid-template-columns: 100%;
+  }
+  .whoweare-cover {
+    display: none;
+  }
+
+  .whoweare-content {
+    grid-area: 1 / 1 / span 1 / span 1;
+  }
+
+  .contact {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .contact-form {
+    grid-area: 1 / 1 / span 1 / span 1;
+  }
+
+  /* contact-cover
+  
+  
+  */
+  .map {
+    grid-area: 2 / 1 / span 1 / span 1;
+  }
+}
+
+@media screen and (min-width: 600px) {
+}
+
+@media screen and (min-width: 1200px) {
+  .whatwedo div {
+    grid-template-columns: 20% 80%;
+  }
+  .whatwedo div h3 {
+    padding-bottom: 20px;
+    grid-area: 1 / 2 / 2 / 3;
+    text-align: left;
+  }
+
+  .whatwedo div span {
+    grid-area: 1 / 1 / 3 / 2;
+  }
+
+  .whatwedo div p {
+    grid-area: 2 / 2 / 3 / 3;
+    text-align: left;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+}
